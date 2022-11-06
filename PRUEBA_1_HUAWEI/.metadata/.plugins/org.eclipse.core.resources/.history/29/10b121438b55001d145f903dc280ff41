@@ -1,0 +1,13 @@
+/*
+ * ov7670Config.h
+ *
+ *  Created on: Oct 26, 2022
+ *      Author: wikst
+ */
+
+#ifndef SRC_OV7670_OV7670CONFIG_H_
+#define SRC_OV7670_OV7670CONFIG_H_
+
+
+
+#endif /* SRC_OV7670_OV7670CONFIG_H_ */

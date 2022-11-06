@@ -1,0 +1,35 @@
+16:22:54 **** Incremental Build of configuration Debug for project STM_CAMARA_PROPIO ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../USB_HOST/App -I../USB_HOST/Target -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Middlewares/ST/STM32_USB_Host_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:153:3: warning: implicit declaration of function 'retarget_init' [-Wimplicit-function-declaration]
+  153 |   retarget_init();
+      |   ^~~~~~~~~~~~~
+../Core/Src/main.c:203:11: warning: unused variable 'myImage1' [-Wunused-variable]
+  203 |  uint8_t* myImage1;
+      |           ^~~~~~~~
+../Core/Src/main.c:202:11: warning: variable 'p_lcdData' set but not used [-Wunused-but-set-variable]
+  202 |  uint8_t* p_lcdData;
+      |           ^~~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Src/main.c: At top level:
+../Core/Src/./lcdIli9341/lcdIli9341.h:374:13: warning: 'drawCircleHelper' declared 'static' but never defined [-Wunused-function]
+  374 | static void drawCircleHelper( int16_t x0, int16_t y0, int16_t r, uint8_t cornername, uint16_t color);
+      |             ^~~~~~~~~~~~~~~~
+../Core/Src/./lcdIli9341/lcdIli9341.h:375:13: warning: 'fillCircleHelper' declared 'static' but never defined [-Wunused-function]
+  375 | static void fillCircleHelper(int16_t x0, int16_t y0, int16_t r, uint8_t cornername, int16_t delta, uint16_t color);
+      |             ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "STM_CAMARA_PROPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\PRUEBAS_CUBEIDE\PRUEBA_1_HUAWEI\STM_CAMARA_PROPIO\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM_CAMARA_PROPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM_CAMARA_PROPIO.elf
+ 
+arm-none-eabi-size   STM_CAMARA_PROPIO.elf 
+arm-none-eabi-objdump -h -S  STM_CAMARA_PROPIO.elf  > "STM_CAMARA_PROPIO.list"
+   text	   data	    bss	    dec	    hex	filename
+  51708	    156	   4220	  56084	   db14	STM_CAMARA_PROPIO.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM_CAMARA_PROPIO.list
+ 
+
+16:22:56 Build Finished. 0 errors, 5 warnings. (took 2s.249ms)
+

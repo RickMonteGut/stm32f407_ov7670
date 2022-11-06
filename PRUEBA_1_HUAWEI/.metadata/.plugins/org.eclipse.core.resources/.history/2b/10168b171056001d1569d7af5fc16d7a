@@ -1,0 +1,13 @@
+/*
+ * lcdIli9341Config.h
+ *
+ *  Created on: Oct 27, 2022
+ *      Author: wikst
+ */
+
+#ifndef SRC_LCDILI9341_LCDILI9341CONFIG_H_
+#define SRC_LCDILI9341_LCDILI9341CONFIG_H_
+
+
+
+#endif /* SRC_LCDILI9341_LCDILI9341CONFIG_H_ */
